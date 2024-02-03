@@ -1,0 +1,11 @@
+@use "../../sass/colors" as colors;
+
+
+
+.headerAlertMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: yellow;
+}

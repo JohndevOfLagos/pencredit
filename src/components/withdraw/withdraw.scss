@@ -1,0 +1,583 @@
+@use "../../sass/colors" as colors;
+
+.withdrawMethod-main {
+  background-color: colors.$grey-light;
+  min-height: 100vh;
+  padding: 2rem 10rem;
+
+  @media screen and (max-width: 600px) {
+    padding: 0rem;
+  }
+}
+
+.widthraw-method_container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  padding: 20px;
+  width: 100%;
+}
+
+.withdraw-method_navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 992px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+.withdraw-method_nav-left {
+  @media screen and (max-width: 1200px) {
+    padding-right: 20px;
+  }
+
+  .withdraw-method_bank-logo {
+    display: block;
+    object-fit: cover;
+    width: 200px;
+    height: 100%;
+    border: 2px solid colors.$primary-purple;
+    border-radius: 8px;
+  }
+}
+
+.withdraw-method_nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @media screen and (max-width: 1200px) {
+    gap: 15px;
+  }
+
+  @media screen and (max-width: 992px) {
+    display: block;
+    margin-top: 30px;
+  }
+  @media screen and (max-width: 884px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+    display: inline-block;
+  }
+
+  .withdraw-method_max {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 999px;
+    color: #000;
+    background-color: colors.$purple-light-3;
+
+    @media screen and (max-width: 992px) {
+      display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      font-size: 13px;
+    }
+  }
+
+  .withdraw-method_fee {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 999px;
+    background-color: colors.$purple-light-5;
+
+    @media screen and (max-width: 992px) {
+      display: block;
+      // margin-top: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin-top: 20px;
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+}
+
+.withdraw_select-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+//  margin-top: 2rem;
+
+  @media screen and (max-width: 884px) {
+    // margin-top: 50px;
+  }
+
+  .select-menu_heading {
+    display: flex;
+    justify-content: center;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -0.35px;
+    color: colors.$purple-light-6;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      font-size: 32px;
+    }
+  }
+
+  .select-menu_p {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -5px;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      font-size: 15px;
+      margin-top: -5px;
+    }
+  }
+}
+
+.withdraw-peer_flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 3rem;
+  gap: 50px;
+
+  @media screen and (max-width: 992px) {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 35px;
+  }
+
+  // @media screen and (max-width: 884px) {
+  //   margin-top: 4rem;
+  // }
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+
+  .withdraw-peer_Box {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+
+    .withdraw-peer_App {
+      display: flex;
+      align-items: center;
+      padding: 18px 20px;
+      border: 2px solid colors.$purple-light-1;
+      border-radius: 8px;
+      box-shadow: 0 0 2px 0 rgb(154 161 171 / 15%);
+
+      @media screen and (max-width: 992px) {
+        padding: 15px 20px;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding: 15px 22px;
+      }
+    }
+
+    .withdraw-peer_icon {
+      font-size: 40px;
+      color: colors.$purple-light-4;
+    }
+
+    .withdraw-peer_info {
+      padding: 10px;
+    }
+
+    .withdraw-peer_Bank {
+      display: flex;
+      align-items: center;
+      padding: 18px 20px;
+      width: 100%;
+      border: 2px solid colors.$purple-light-1;
+      border-radius: 8px;
+      box-shadow: 0 0 2px 0 rgb(154 161 171 / 15%);
+
+      @media screen and (max-width: 768px) {
+        margin-top: 35px;
+        padding: 15px 22px;
+      }
+    }
+
+    .peer-to-peer_heading {
+      font-size: 20px;
+      font-weight: bolder;
+
+      @media screen and (max-width: 768px) {
+        font-size: 19px;
+      }
+
+      & > .icon-head {
+        margin-left: 4px;
+        color: rgb(255, 196, 0);
+      }
+    }
+
+    .peer-to-peer_list {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+}
+
+.cancel-button {
+  display: grid;
+  justify-content: center;
+  // margin-top: 4.3rem;
+  // @media (max-width:884px) {
+  //   margin-top: 5rem;
+  // }
+
+  & > a {
+    text-transform: capitalize;
+    color: colors.$purple-light-2;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 15px 35px;
+    border: 2px solid colors.$purple-light-2;
+    border-radius: 8px;
+    box-shadow: 0 0 2px 0 rgb(154 161 171 / 15%);
+  }
+
+  & > a:active {
+    outline: px solid colors.$purple-light-1;
+  }
+}
+
+
+
+
+
+
+
+
+
+// Withdrawal Money form Form
+
+.withdraw-form_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 1rem;
+}
+
+.cancel-icon {
+  display: flex;
+  justify-content: right;
+  margin-top: 0.45rem;
+  font-size: 2.8rem;
+  color: colors.$purple-light-6;
+}
+
+.withdraw-form_heading {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   @media (max-width:428px) {
+    margin-top: 1rem;
+   }
+  & > h4 {
+    font-size: 2rem;
+    font-weight: bolder;
+    letter-spacing: -0.3px;
+    color: colors.$purple-light-6;
+    @media (max-width:428px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .withdraw-form_available-amount {
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 15px;
+    background-color: colors.$purple-light-3;
+    border-radius: 999px;
+    display: flex;
+    width: max-content;
+    @media (max-width:428px) {
+      font-size: 0.95rem;
+    }
+    @media (max-width:390px) {
+      flex-direction: column;
+    }
+  }
+
+  .withdraw-form_p {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+.withdraw-form_auth {
+  display: flex;
+  flex-direction: column;
+  margin: 60px 0px 60px 0px;
+
+  .withdraw-form_auth-box {
+    display: flex;
+    align-items: center;
+    padding: 25px 20px;
+    background-color: colors.$purple-light-4;
+    border-radius: 8px;
+    gap: 10px;
+
+    .withdraw-form_auth_icon-key {
+      font-size: 2.8rem;
+      color: #fff;
+      @media (max-width:428px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    .withdraw-form_auth_heading {
+      font-size: 1.2rem;
+      font-weight: bolder;
+      color: #fff;
+      letter-spacing: -0.3px;
+      @media (max-width:428px) {
+        font-size: 1.1rem;
+      }
+    }
+
+    .withdraw-form_auth_p {
+      font-size: 0.95rem;
+      font-weight: 500;
+      line-height: 1.5rem;
+      color: #fff;
+      @media (max-width:428px) {
+        font-size: 0.90rem;
+      }
+    }
+  }
+}
+
+.form-withdraw_box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  @media (max-width:480px) {
+    gap: 30px;
+  }
+  @media (max-width:390px) {
+    gap: 20px;
+  }
+
+  label {
+    display: block;
+    flex-direction: column;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 650;
+    margin-bottom: 1rem;
+    @media (max-width:390px) {
+      font-size: 0.95rem;
+    }
+  }
+
+  .form__amount__input_form {
+    position: relative;
+
+    .Form__amount__dollar-sign {
+      position: relative;
+      top: -38.5px;
+      left: 16px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .form-withdraw_amount {
+    .form__amount__input_form {
+      display: flex;
+      flex-direction: column;
+
+      .form_amount_input__icon-block {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 0.25rem;
+        border-radius: 5px;
+        border: 1px solid lighten(colors.$purple-light-2, 38);
+        padding-left: 10px;
+
+        & > .dollar-sign {
+          font-size: 20px;
+        }
+
+        & > input {
+          flex: 1;
+          height: 100%;
+          padding: 15px 0;
+          font-size: 18px;
+          font-weight: 600;
+          outline: 0;
+          border: 1px solid transparent;
+          background-color: rgba(181, 202, 225, 0.22);
+        }
+
+        & > input:focus {
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+
+
+  .form-withdraw_password {
+    .form__password__input_form {
+      display: flex;
+      flex-direction: column;
+
+
+        & > input {
+          flex: 1;
+          height: 100%;
+          padding: 15px;
+          font-size: 18px;
+          font-weight: 600;
+          outline: 0;
+          border: 1px solid transparent;
+          border-radius: 5px;
+          background-color: rgba(181, 202, 225, 0.22);
+          border: 1px solid lighten(colors.$purple-light-2, 38);
+        }
+
+        & > input:focus {
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        .no-zoom {
+          touch-action: none;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+  .form-withdraw_destination {
+
+    .select-block select {
+      display: block;
+      padding: 15px 20px;
+      height: 100%;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: "Quicksand", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+      border: 1px solid lighten(colors.$purple-light-2, 38);
+      border-radius: 5px;
+      background-color: rgba(181, 202, 225, 0.22);
+      outline: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+
+    .select-block {
+      position: relative;
+    }
+
+    .custom-destination_icons {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      background: transparent;
+      height: 100%;
+      width: 2rem;
+      pointer-events: none;
+
+      .destination_input-line {
+        position: relative;
+        top: 10px;
+        left: -25px;
+        font-size: 22px;
+        color: #0000002e;
+      }
+
+      .destination_input-carat-down {
+        position: relative;
+        top: -26.5px;
+        left: -10px;
+        font-size: 30px;
+        color: #0000002e;
+      }
+    }
+  }
+
+  
+
+.withdraw-form_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    border-radius: 5px;
+    letter-spacing: -0.3px;
+    margin-top: 1rem;
+
+    &.button-enabled{
+      background-color: #fff;
+      color: colors.$purple-light-4;
+    border: 2px solid colors.$purple-light-4;
+    }
+    &.button-enabled:active {
+      outline: 4px solid colors.$purple-light-1;
+    }
+  
+    &.button-disabled{
+      border: 2px solid colors.$purple-light-1;
+      color: colors.$purple-light-2a;
+      background-color: #fff;
+      pointer-events: none;
+      cursor:not-allowed;
+    }
+
+  @media (max-width: 380px) {
+    margin-top: 20px;
+  }
+
+
+}

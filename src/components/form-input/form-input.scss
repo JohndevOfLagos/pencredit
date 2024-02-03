@@ -1,0 +1,64 @@
+@use "../../sass/colors" as colors;
+
+
+.input-control{
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 1.2rem;
+
+   &> label{
+      font-size: 14px;
+      font-weight: 700;
+      color: #353535;
+      margin-bottom: .35rem;
+      @media (max-width:320px){
+         margin-bottom: 0.45rem;
+      }
+   }
+
+   &> input {
+     padding: 11px;
+     font-size: 16px;
+     font-weight: 500;
+     border: 1px solid transparent;
+     border-radius: 8px;
+     background-color: #EFF3F9;
+     outline: none;
+     @media (max-width:320px) {
+       padding: 6px;
+     }
+
+    
+   }
+   &>input:invalid[focused="true"] ~ .error-message{
+      display: block;
+     }
+   &> input:focus {
+     box-shadow: 1px -1px 0px 2px rgba(232, 222, 249, 0.65), -1px 1px 0px 2px rgba(232, 222, 249, 0.65);
+     background-color: rgba(236, 222, 247, 0.15)
+   }
+
+   &>input:invalid[focused="true"]{
+      box-shadow: 1px -1px 0px 2px rgb(249, 222, 222), -1px 1px 0px 2px rgb(249, 222, 222);
+     background-color: rgba(236, 222, 247, 0.15)
+   }
+}
+
+.error-message{
+   display: flex;
+   align-items: center;
+   gap: .5rem;
+   color: red;
+   margin-top: .5rem;
+   display: none;
+
+   &>svg{
+      font-size: 1.25rem;
+   }
+
+   &>span{
+      
+      font-size: 1rem;
+      font-weight: 450;
+   }
+}

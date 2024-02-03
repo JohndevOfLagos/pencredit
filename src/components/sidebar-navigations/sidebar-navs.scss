@@ -1,0 +1,155 @@
+@use "../../sass/colors" as colors;
+
+.sidebar-main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 25vh);
+
+
+  .bankLogo {
+    display: flex;
+    align-items: center;
+
+    &>img {
+      display: block;
+      object-fit: cover;
+      height: 100%;
+      width: 180px;
+    }
+  }
+
+
+  .sidebar__line-devide {
+    height: 1.5px;
+    width: 100%;
+    background-color: colors.$purple-light-1;
+  }
+
+  .Navigations {
+    text-transform: uppercase;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    color: colors.$purple-light-2;
+    @media (max-width: 992px) {
+      font-size: 1rem;
+      margin-top: 5rem;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      margin-top: 4rem;
+    }
+  }
+
+
+
+
+    .sidebar-menu {
+      margin-top: 2rem;
+      width: 100%;
+      height: max(60.5vh);
+      padding: 0 0.45rem;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      @media (max-width: 992px) {
+        height: 100vh;
+      }
+      @media (max-width: 480px) {
+        padding: 0px;
+      }
+
+      & > a {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 0.8rem 0;
+        
+
+        .sidebar-menu_list {
+          display: flex;
+          align-items: center;
+          padding: 0.8rem 0;
+          transition: all 100ms ease;
+
+
+          .sidebar-menu_list_body {
+            display: flex;
+            align-items: center;
+            gap: 0.80rem;
+            transition: all 200ms ease;
+
+            & > span {
+              display: flex;
+              align-items: center;
+              font-size: 0.90rem;
+              font-weight: 500;
+              color: colors.$primary-purple;
+              @media (max-width: 480px) {
+                font-size: 14px;
+              }
+              
+            }
+
+            &>svg {
+              font-size: 1.2rem;
+              color: colors.$purple-light-4;
+            }
+
+            
+
+            // .sidebar-menu_list_flex {
+            //       position: absolute;
+            //       top: auto;
+            //       right: 0;
+            //     }
+          }
+        }
+
+        .sidebar-menu_list:hover {
+          background-color: colors.$purple-light-1;
+
+          .sidebar-menu_list_body {
+            transform: translateX(1rem);
+          }
+        }
+         
+      }
+
+      &>button {
+        display: flex;
+        align-items: center;
+        margin-top: 1.5rem;
+        width: 100%;
+        padding: 0.8rem 0;
+        gap: 0.80rem;
+        border: none;
+        background-color: transparent;
+        font-size: 0.90rem;
+        font-weight: 500; 
+        color: colors.$primary-purple;
+        
+        &>svg {
+          font-size: 1.3rem;
+          color: colors.$purple-light-4;
+        }
+      }
+
+    }
+    
+    .App-version {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+
+      &>span {
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+    }
+
+  }
+

@@ -1,0 +1,221 @@
+@use "../../sass/colors" as colors;
+
+.HomeSideNavigation__Container::before {
+  content: "";
+  position: fixed;
+  z-index: -1; /* Place the overlay behind everything */
+  height: 100%; /* Cover the entire viewport height */
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.HomeSideNavigation__Container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99999; /* Ensure the navigation is above the overlay */
+  top: 0;
+  right: 0;
+}
+
+.HomeSideNavigation {
+  position: fixed;
+  height: 100vh;
+  width: 48%;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding: 0.45rem;
+}
+
+// handBurger Bar
+
+.pencredit-logo__handburger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+
+  & > li {
+    display: flex;
+    align-items: center;
+
+    & > button {
+      border: none;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.95rem;
+      font-weight: 450;
+      border: 1.2px solid colors.$primary-purple;
+      border-radius: 999px;
+      background-color: transparent;
+      color: colors.$primary-purple;
+    }
+    & > button:active {
+      outline: 2px solid colors.$primary-purple-3;
+    }
+
+    & > a {
+      & > img {
+        display: block;
+        object-fit: cover;
+        height: 100%;
+        width: 170px;
+      }
+    }
+  }
+}
+
+.HomeSideNavigation-content {
+  display: flex;
+  flex-direction: column;
+
+  .HomeSideNavigation__content-server {
+    display: flex;
+
+    /// Home
+
+    & > a {
+      display: flex;
+      align-items: center;
+      margin: 1rem;
+      width: 100%;
+
+      .pencredit-hyperlink {
+        display: flex;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        background-color: colors.$purple-light-1;
+        align-items: center;
+        gap: 0.8rem;
+
+        & > li {
+          display: flex;
+          align-items: center;
+
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: colors.$primary-purple;
+
+          & > svg {
+            font-size: 1.3rem;
+            color: colors.$purple-light-4;
+          }
+        }
+      }
+    }
+  }
+
+  .Account__content-server {
+    & > h6 {
+      font-size: 0.9rem;
+      font-weight: 450;
+      text-transform: capitalize;
+      padding: 0 1rem;
+      color: colors.$purple-light-4;
+    }
+
+    .Account__content-server-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+      padding-right: 1rem;
+      padding-left: 0.75rem;
+      margin-top: 0.25rem;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+    a:hover {
+      background-color: colors.$purple-light-1;
+    }
+
+    li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1rem 1rem;
+      transition: all 0.3s ease;
+
+      & > span {
+        display: flex;
+        align-items: center;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: colors.$primary-purple;
+      }
+
+      & > svg {
+        font-size: 1.3rem;
+        color: colors.$purple-light-4;
+      }
+    }
+
+    li:hover {
+      padding-left: 2rem;
+    }
+  }
+
+  // Resouces
+  .Resources__content-server {
+    & > h6 {
+      font-size: 0.9rem;
+      font-weight: 450;
+      text-transform: capitalize;
+      padding: 0 1rem;
+      color: colors.$purple-light-4;
+    }
+  }
+
+  .Resources__content-server-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 0.75rem;
+    margin-top: 0.25rem;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+    a:hover {
+      background-color: colors.$purple-light-1;
+    }
+
+    li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1rem 1rem;
+      transition: all 0.3s ease;
+
+      & > span {
+        display: flex;
+        align-items: center;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: colors.$primary-purple;
+      }
+
+      & > svg {
+        font-size: 1.3rem;
+        color: colors.$purple-light-4;
+      }
+    }
+
+    li:hover {
+      padding-left: 2rem;
+    }
+  }
+}

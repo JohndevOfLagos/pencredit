@@ -1,0 +1,237 @@
+@use "../../sass/colors" as colors;
+
+.header__home {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  box-shadow: 0px 0px 5px 0px #00000087;
+
+  font-size: 14px;
+
+  & svg {
+    font-size: 1.25rem;
+  }
+
+  & a {
+    font-weight: 600;
+  }
+}
+
+.header__top {
+  background-color: colors.$primary-purple;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
+  @media (max-width:768px) {
+    padding: 0.5rem 2rem;
+  }
+  @media (max-width:375px) {
+    justify-content: space-evenly;
+    padding: 0.5rem 1.8rem;
+  }
+  @media (max-width:360px) {
+    justify-content: space-evenly;
+    padding: 0.5rem 1.2rem;
+  }
+  @media (max-width:320px) {
+    justify-content: space-evenly;
+    padding: 0.5rem 0.80rem;
+  }
+  & > a {
+    display: flex;
+    flex-direction: column;
+
+    & > img {
+      width: 200px;
+      height: 100%;
+      object-fit: cover;
+      @media (max-width:768px) {
+        width: 180px;
+       }
+      @media (max-width:600px) {
+        width: 160px;
+       }
+      @media (max-width:375px) {
+        width: 150px;
+       }
+      @media (max-width:320px) {
+        width: 140px;
+       }
+    }
+  }
+}
+
+.header-nav__top {
+  & > ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+.header-nav__top > ul > li > a:hover {
+  text-underline-offset: 8px;
+  text-decoration: underline;
+}
+
+
+.header-nav__top > ul,
+.header-nav__auth > ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  & > li {
+    display: flex;
+
+    & > a {
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.header-nav__top > ul {
+  @media (max-width:992px) {
+   display: none;
+  }
+}
+.header-nav__auth > ul > li:first-child {
+  @media (max-width:992px) {
+    display: none;
+   }   
+}
+
+.nav-icon__link {
+  border: 1.6px solid #fff;
+  padding: 10px 8px;
+  border-radius: 8px;
+
+  & span {
+    font-size: 16px;
+    @media (max-width:992px) {
+      font-size: 20px;
+    }
+    @media (max-width:768px) {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    @media (max-width:375px) {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+ & svg {
+  font-size: 20px;
+   @media (max-width:992px) {
+      font-size: 20px;
+    }
+  }
+}
+
+
+
+.nav__auth-bar { 
+  & svg {
+    display: none;
+  @media (max-width:992px) {
+     display: flex;
+     font-size: 1.8rem;
+     margin-left: 24px;
+   }   
+   @media (max-width:375px) {
+    margin-left: 10px;
+  }
+
+  }
+}
+
+
+
+.header-nav__auth > ul > li > a {
+  gap: 0.25rem;
+}
+
+.nav__auth-open {
+  font-size: 16px;
+}
+.nav__auth-open:hover {
+  text-underline-offset: 10px;
+  text-decoration: underline;
+}
+
+
+
+
+.header__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background-color: #fff;
+  @media (max-width:768px) {
+    display: none;
+  }
+}
+
+.header-nav__bottom > ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  & > li {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+
+    & > a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgb(70, 70, 70);
+
+      & > .icon-circular-bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: colors.$purple-light-1;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+      }
+    }
+  }
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+
+  &__block {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    gap: 0.25rem;
+    border-radius: 10px;
+    border: 1px solid lighten(colors.$purple-light-2, 38);
+    padding: 0 0.5rem;
+
+    & > input {
+      flex: 1;
+      height: 40px;
+      outline: 0;
+      border: 1px solid transparent;
+      background-color: rgba(181, 202, 225, 0.22);
+
+      &::placeholder {
+        color: colors.$primary-purple-3;
+        font-weight: 500;
+      }
+    }
+  }
+}

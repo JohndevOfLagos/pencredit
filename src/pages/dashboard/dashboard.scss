@@ -1,0 +1,261 @@
+@use "../../sass/colors" as colors;
+
+.account-numb {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-info__card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1.4rem 0;
+  gap: 1.8rem;
+
+  .icon-block__dashboard-info {
+    display: block;
+    align-items: center;
+    height: 100%;
+
+    & > svg {
+      font-size: 2.3rem;
+      color: #fff;
+    }
+  }
+
+  .dashboard-info__card__features {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+
+    .text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #ffffffc4;
+    }
+
+    .num {
+      font-size: 1.6rem;
+      font-weight: bolder;
+      color: #fff;
+
+      & > span {
+        font-size: 1.8rem;
+        font-weight: 650;
+      }
+    }
+  }
+}
+
+.balance__list_track_list {
+  display: flex;
+  justify-content: space-between;
+  // margin-top: 1.2rem;
+  margin-bottom: 2.2rem;
+
+  @media (max-width: 1370px) {
+    display: block;
+  }
+
+  .dashboard-info__item {
+    display: flex;
+    flex: auto;
+    max-width: 365px;
+
+    @media (max-width: 1370px) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .dashboard-info__item_2 {
+    display: flex;
+    flex: auto;
+    max-width: 264.5px;
+
+    @media (max-width: 1370px) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    a {
+      margin-top: 25px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.1rem 0.32rem;
+      border-radius: 999px;
+      color: colors.$primary-purple;
+      background: transparent;
+      gap: 0.3rem;
+
+      .btn-view {
+        text-transform: capitalize;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+
+    a:active {
+      color: #0000006a;
+    }
+  }
+
+  .card-hd-flex {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+
+    .card-hd {
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      border-radius: 999px;
+    }
+
+    font-size: 18px;
+    font-weight: 600;
+
+    .card-hd-red {
+      background-color: rgb(226, 7, 7);
+      padding: 0.18rem 0.45rem;
+    }
+
+    .card-hd-blue {
+      background-color: rgba(0, 195, 238, 0.935);
+      padding: 0.18rem 0.45rem;
+    }
+
+    .card-hd-green {
+      background-color: rgb(3, 201, 0);
+      padding: 0.18rem 0.45rem;
+    }
+
+    .card-hd-purple {
+      background-color: rgb(22, 11, 153);
+      padding: 0.18rem 0.45rem;
+    }
+
+    .card-num {
+      position: absolute;
+      font-size: 2rem;
+      font-weight: 600;
+      top: -10px;
+      right: 0;
+    }
+  }
+}
+
+.Recent__transaction_track {
+  .table-label {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: border;
+    color: colors.$purple-light-2;
+  }
+
+  .table_scroll {
+    @media (max-width: 1200px) {
+      flex: auto;
+      overflow-x: scroll;
+      height: 100%;
+      max-width: 100vh;
+    }
+  }
+
+  .table_scroll {
+    @media (min-width: 480px) {
+      flex: auto;
+      overflow-x: scroll;
+      height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+
+    #table-header-2 thead,
+    th,
+    td {
+      border: 1.5px solid #00000019;
+    }
+
+    th {
+      text-decoration: none;
+      text-align: left;
+      padding: 10px 0;
+      padding-left: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #000;
+      background-color: #00000013;
+    }
+
+    td {
+      :not(:last-child) {
+        text-align: center;
+      }
+
+      position: relative;
+      padding: 0.3rem;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: colors.$black-dark;
+      text-align: center;
+
+      :last-child {
+        padding-left: 0.3rem;
+        font-size: 13.5px;
+        text-align: left;
+      }
+
+      & > .plus {
+        position: absolute;
+        top: 0;
+        left: 23.5%;
+      }
+
+      & > .green {
+        color: #03ca00;
+      }
+
+      & > .red {
+        color: #e20707b6;
+      }
+
+      .complete-green {
+        color: #fff;
+        padding: 0.1rem 0.25rem;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 0.3rem;
+        background-color: #03ca00;
+      }
+
+      .Pending-yellow {
+        color: #000;
+        padding: 0.1rem 0.25rem;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 0.3rem;
+        background-color: #ffd000;
+      }
+
+      a {
+        text-transform: capitalize;
+        padding: 0.25rem 0.45rem;
+        border: 1.5px solid rgba(0, 195, 238, 0.935);
+        border-radius: 0.25rem;
+        color: rgba(0, 195, 238, 0.935);
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+}

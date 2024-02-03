@@ -1,0 +1,23 @@
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 2px 0 rgb(154 161 171 / 15%);
+  border-radius: 0.25rem;
+  width: 100%;
+
+  &-body {
+    padding: 1.25rem 1.6rem;
+  }
+
+  &.has-border-btm {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.27);
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &.has-border-btm + & {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+}

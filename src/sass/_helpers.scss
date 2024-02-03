@@ -1,0 +1,10 @@
+
+@mixin important-text{
+   text-transform: uppercase;
+   margin-top: 105px;
+   font-size: 13px;
+   font-weight: bolder;
+   color: colors.$purple-light-2;
+}
+
+
